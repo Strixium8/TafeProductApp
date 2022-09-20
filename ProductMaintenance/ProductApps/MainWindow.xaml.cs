@@ -39,6 +39,9 @@ namespace ProductApps
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
+
+            decimal totalCharge = cProduct.TotalPayment + 25;
+            totalChargeTextBlock.Text = Convert.ToString(totalCharge);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
