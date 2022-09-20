@@ -42,6 +42,9 @@ namespace ProductApps
 
             decimal totalCharge = cProduct.TotalPayment + 25;
             totalChargeTextBlock.Text = Convert.ToString(totalCharge);
+
+            decimal wrapCharge = cProduct.TotalPayment + 25 + 5;
+            wrapChargeTextBlock.Text = Convert.ToString(wrapCharge);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
