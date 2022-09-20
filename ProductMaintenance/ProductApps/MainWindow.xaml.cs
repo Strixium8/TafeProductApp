@@ -40,11 +40,18 @@ namespace ProductApps
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
 
-            decimal totalCharge = cProduct.TotalPayment + 25;
+
+            decimal totalPaymentTemp = cProduct.TotalPayment;
+            float totalPayment = (float)totalPaymentTemp;
+
+            float totalCharge = totalPayment + 25;
             totalChargeTextBlock.Text = Convert.ToString(totalCharge);
 
-            decimal wrapCharge = cProduct.TotalPayment + 25 + 5;
+            float wrapCharge = totalPayment + 25 + 5;
             wrapChargeTextBlock.Text = Convert.ToString(wrapCharge);
+
+            double gstCharge = (totalPayment + 25 + 5)*1.1;
+            gstChargeTextBlock.Text = Convert.ToString(gstCharge);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
